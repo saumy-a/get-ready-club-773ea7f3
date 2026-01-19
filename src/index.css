@@ -6,42 +6,44 @@
 
 @layer base {
   :root {
-    --background: 240 10% 4%;
+    --background: 220 20% 6%;
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 6%;
+    --card: 220 20% 8%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 6%;
+    --popover: 220 20% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 173 80% 50%;
-    --primary-foreground: 240 10% 4%;
+    --primary: 180 85% 45%;
+    --primary-foreground: 220 20% 6%;
 
-    --secondary: 240 10% 12%;
+    --secondary: 220 20% 12%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 10% 15%;
-    --muted-foreground: 240 5% 55%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 55%;
 
-    --accent: 173 80% 50%;
-    --accent-foreground: 240 10% 4%;
+    --accent: 25 95% 55%;
+    --accent-foreground: 220 20% 6%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 240 10% 15%;
-    --input: 240 10% 15%;
-    --ring: 173 80% 50%;
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 180 85% 45%;
 
     --radius: 0.75rem;
 
-    /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(173 80% 50%) 0%, hsl(199 89% 48%) 100%);
-    --gradient-glow: radial-gradient(ellipse at center, hsl(173 80% 50% / 0.15) 0%, transparent 70%);
-    --gradient-hero: linear-gradient(180deg, hsl(240 10% 4%) 0%, hsl(240 10% 8%) 100%);
+    /* Custom design tokens - CODE club palette */
+    --gradient-primary: linear-gradient(135deg, hsl(180 85% 45%) 0%, hsl(25 95% 55%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(180 85% 45% / 0.2) 0%, transparent 70%);
+    --gradient-hero: linear-gradient(180deg, hsl(220 20% 6%) 0%, hsl(220 25% 10%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(25 95% 55%) 0%, hsl(35 100% 60%) 100%);
     
-    --shadow-glow: 0 0 60px hsl(173 80% 50% / 0.3);
+    --shadow-glow: 0 0 60px hsl(180 85% 45% / 0.3);
+    --shadow-glow-accent: 0 0 60px hsl(25 95% 55% / 0.3);
     --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
 
     --font-display: 'Space Grotesk', sans-serif;
@@ -74,12 +76,20 @@
     box-shadow: var(--shadow-glow);
   }
 
+  .glow-effect-accent {
+    box-shadow: var(--shadow-glow-accent);
+  }
+
   .hero-gradient {
     background: var(--gradient-hero);
   }
 
   .bg-glow {
     background: var(--gradient-glow);
+  }
+
+  .bg-glow-accent {
+    background: radial-gradient(ellipse at center, hsl(var(--accent) / 0.15) 0%, transparent 70%);
   }
 }
 
