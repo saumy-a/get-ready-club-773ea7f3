@@ -1,6 +1,6 @@
 import EmailSignup from "@/components/EmailSignup";
 import GlowOrb from "@/components/GlowOrb";
-import { Instagram, Twitter } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
 import codeLogo from "@/assets/code-logo.png";
 
 const Index = () => {
@@ -84,18 +84,22 @@ const Index = () => {
             <span className="font-body text-sm text-muted-foreground">Follow us</span>
             <div className="flex gap-4">
               <a
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-muted bg-secondary/50 text-muted-foreground transition-all hover:border-accent hover:bg-accent/10 hover:text-accent"
+                href="https://www.instagram.com/codeclub.gsfcu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-muted bg-secondary/50 text-muted-foreground transition-all hover:border-primary hover:bg-primary/10 hover:text-primary"
                 aria-label="Follow us on Instagram"
               >
                 <Instagram className="h-4 w-4" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/code-club-gsfc-university-0621a61ba/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-muted bg-secondary/50 text-muted-foreground transition-all hover:border-primary hover:bg-primary/10 hover:text-primary"
-                aria-label="Follow us on Twitter"
+                aria-label="Follow us on LinkedIn"
               >
-                <Twitter className="h-4 w-4" />
+                <Linkedin className="h-4 w-4" />
               </a>
             </div>
           </div>
