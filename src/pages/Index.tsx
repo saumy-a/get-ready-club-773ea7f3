@@ -8,7 +8,7 @@ const Index = () => {
     <div className="relative min-h-screen overflow-hidden hero-gradient">
       {/* Background glow effects */}
       <GlowOrb className="left-1/4 top-1/4 h-96 w-96 -translate-x-1/2 -translate-y-1/2" />
-      <GlowOrb className="right-1/4 bottom-1/4 h-80 w-80 translate-x-1/2 translate-y-1/2 bg-glow-accent" />
+      <GlowOrb className="right-1/4 bottom-1/4 h-80 w-80 translate-x-1/2 translate-y-1/2" />
       
       {/* Grid pattern overlay */}
       <div 
@@ -55,9 +55,9 @@ const Index = () => {
             style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
           >
             Where{' '}
-            <span className="text-gradient">Code</span>
+            <span className="text-primary">Code</span>
             {' '}Meets{' '}
-            <span className="text-accent">Community</span>
+            <span className="text-primary">Community</span>
           </h1>
 
           {/* Subheading */}
