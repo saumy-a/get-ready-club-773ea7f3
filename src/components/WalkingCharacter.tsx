@@ -3,10 +3,15 @@ import { useEffect, useState } from "react";
 const SPRITE_URL =
   "https://ik.imagekit.io/xeft3ktqa/platformer_character_sprites_-_basic_platformer.png";
 
-const FRAME_COUNT = 7;
-const FRAME_W = 25; // source px
-const FRAME_H = 130; // source px
-const SCALE = 0.6; // displayed scale
+// Sprite sheet is a grid: 5 columns x 3 rows
+const SHEET_W = 175;
+const SHEET_H = 130;
+const COLS = 5;
+const ROWS = 3;
+const FRAME_COUNT = COLS * ROWS; // 15 frames
+const FRAME_W = SHEET_W / COLS; // 35
+const FRAME_H = SHEET_H / ROWS; // ~43.33
+const SCALE = 1.6; // displayed scale (small source frames)
 const DISPLAY_W = FRAME_W * SCALE;
 const DISPLAY_H = FRAME_H * SCALE;
 const SPEED = 90; // px per second
@@ -50,6 +55,10 @@ const WalkingCharacter = () => {
     return () => cancelAnimationFrame(raf);
   }, [dir]);
 
+  // Iterate frames row by row, left to right
+  const col = frame % COLS;
+  const row = Math.floor(frame / COLS);
+
   return (
     <div
       aria-hidden="true"
@@ -68,8 +77,8 @@ const WalkingCharacter = () => {
           height: `${DISPLAY_H}px`,
           backgroundImage: `url(${SPRITE_URL})`,
           backgroundRepeat: "no-repeat",
-          backgroundPosition: `-${frame * FRAME_W * SCALE}px 0px`,
-          backgroundSize: `${FRAME_W * FRAME_COUNT * SCALE}px ${FRAME_H * SCALE}px`,
+          backgroundPosition: `-${col * FRAME_W * SCALE}px -${row * FRAME_H * SCALE}px`,
+          backgroundSize: `${SHEET_W * SCALE}px ${SHEET_H * SCALE}px`,
           imageRendering: "pixelated",
           transform: `scaleX(${dir})`,
           transformOrigin: "center",
