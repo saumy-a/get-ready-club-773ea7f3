@@ -1,115 +1,160 @@
 import EmailSignup from "@/components/EmailSignup";
-import GlowOrb from "@/components/GlowOrb";
 import { Instagram, Linkedin } from "lucide-react";
 import codeLogo from "@/assets/code-logo.png";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden hero-gradient">
-      {/* Background glow effects */}
-      <GlowOrb className="left-1/4 top-1/4 h-96 w-96 -translate-x-1/2 -translate-y-1/2" />
-      <GlowOrb className="right-1/4 bottom-1/4 h-80 w-80 translate-x-1/2 translate-y-1/2" />
-      
-      {/* Grid pattern overlay */}
-      <div 
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
-        }}
-        aria-hidden="true"
-      />
+    <div className="relative min-h-screen bg-background text-foreground">
+      {/* NAV */}
+      <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between border-b border-border bg-background px-6 py-4 md:px-12">
+        <a href="#" className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em]">
+          <span className="bg-primary px-1.5 py-0.5 text-primary-foreground">{`{ }`}</span>
+          CODE Club
+        </a>
+        <div className="font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground">
+          01 — Coming Soon
+        </div>
+      </nav>
 
-      <main className="relative flex min-h-screen flex-col items-center justify-center px-6 py-12">
-        <div className="w-full max-w-3xl text-center">
-          {/* Logo */}
-          <div 
-            className="mb-8 animate-fade-in"
-            style={{ animationDelay: '0.1s' }}
-          >
-            <img 
-              src={codeLogo} 
-              alt="CODE Club Logo" 
-              className="mx-auto h-28 w-auto sm:h-36 drop-shadow-2xl"
-            />
+      {/* HERO */}
+      <main className="grid min-h-screen grid-cols-1 pt-20 md:grid-cols-2">
+        {/* LEFT */}
+        <section className="flex flex-col justify-center border-b border-border px-6 py-16 md:border-b-0 md:border-r md:px-12 md:py-20">
+          <div className="mb-8 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground animate-fade-in">
+            <span className="block h-px w-6 bg-muted-foreground" />
+            University Code Club — Est. 2020
           </div>
 
-          {/* Badge */}
-          <div 
-            className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 animate-fade-in"
-            style={{ animationDelay: '0.2s' }}
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-            </span>
-            <span className="font-body text-sm font-medium text-primary">
-              Launching Soon
-            </span>
-          </div>
+          <img
+            src={codeLogo}
+            alt="CODE Club Logo"
+            className="mb-8 h-16 w-auto animate-fade-in"
+            style={{ animationDelay: '0.1s', animationFillMode: 'both' }}
+          />
 
-          {/* Main heading */}
-          <h1 
-            className="mb-6 font-display text-5xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl md:text-7xl animate-slide-up"
-            style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
+          <h1
+            className="mb-8 font-serif text-[52px] font-semibold leading-[1] tracking-[-0.02em] text-foreground sm:text-[64px] md:text-[78px] animate-slide-up"
+            style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
           >
-            Where{' '}
-            <span className="text-primary">Code</span>
-            {' '}Meets{' '}
-            <span className="text-primary">Community</span>
+            Build.
+            <br />
+            <em className="font-light italic">Learn.</em>
+            <br />
+            <span className="hl-mark">Ship.</span>
           </h1>
 
-          {/* Subheading */}
-          <p 
-            className="mx-auto mb-12 max-w-xl font-body text-lg leading-relaxed text-muted-foreground sm:text-xl animate-slide-up"
-            style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
+          <p
+            className="mb-10 max-w-md font-mono text-sm leading-[1.8] text-muted-foreground animate-slide-up"
+            style={{ animationDelay: '0.35s', animationFillMode: 'both' }}
           >
-            Be the first to know when we launch. Join our exclusive waitlist and get early access to CODE Club.
+            A community of students who write code, solve hard problems, and build things that matter. Our new home is launching soon — get on the list.
           </p>
 
-          {/* Email signup */}
-          <div 
-            className="flex justify-center animate-slide-up"
-            style={{ animationDelay: '0.7s', animationFillMode: 'both' }}
+          <div
+            className="animate-slide-up"
+            style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
           >
             <EmailSignup />
           </div>
 
-          {/* Social links */}
-          <div 
-            className="mt-16 flex items-center justify-center gap-6 animate-fade-in"
-            style={{ animationDelay: '0.9s', animationFillMode: 'both' }}
+          <div
+            className="mt-12 flex items-center gap-4 animate-fade-in"
+            style={{ animationDelay: '0.7s', animationFillMode: 'both' }}
           >
-            <span className="font-body text-sm text-muted-foreground">Follow us</span>
-            <div className="flex gap-4">
-              <a
-                href="https://www.instagram.com/codeclub.gsfcu/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-muted bg-secondary/50 text-muted-foreground transition-all hover:border-primary hover:bg-primary/10 hover:text-primary"
-                aria-label="Follow us on Instagram"
-              >
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/code-club-gsfc-university-0621a61ba/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-muted bg-secondary/50 text-muted-foreground transition-all hover:border-primary hover:bg-primary/10 hover:text-primary"
-                aria-label="Follow us on LinkedIn"
-              >
-                <Linkedin className="h-4 w-4" />
-              </a>
-            </div>
+            <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground">
+              Follow
+            </span>
+            <span className="block h-px w-6 bg-border" />
+            <a
+              href="https://www.instagram.com/codeclub.gsfcu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 w-9 items-center justify-center border border-border text-muted-foreground transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
+              aria-label="Follow us on Instagram"
+            >
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/code-club-gsfc-university-0621a61ba/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 w-9 items-center justify-center border border-border text-muted-foreground transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
+              aria-label="Follow us on LinkedIn"
+            >
+              <Linkedin className="h-4 w-4" />
+            </a>
           </div>
-        </div>
+        </section>
+
+        {/* RIGHT */}
+        <section className="flex flex-col justify-center px-6 py-16 md:px-12 md:py-20">
+          {/* Stats grid */}
+          <div
+            className="mb-10 grid grid-cols-2 gap-px border border-border bg-border animate-fade-in"
+            style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
+          >
+            {[
+              { num: '120+', label: 'Members' },
+              { num: '18', label: 'Projects built' },
+              { num: '6', label: 'Hackathons won' },
+              { num: '3rd yr', label: 'Running strong' },
+            ].map((s) => (
+              <div
+                key={s.label}
+                className="group bg-background p-7 transition-colors hover:bg-primary hover:text-primary-foreground"
+              >
+                <div className="mb-1.5 font-serif text-4xl font-semibold leading-none">{s.num}</div>
+                <div className="font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground group-hover:text-primary-foreground/70">
+                  {s.label}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Code block */}
+          <div
+            className="border border-border bg-card p-6 font-mono text-xs leading-[1.8] animate-fade-in"
+            style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
+          >
+            <div className="mb-4 flex gap-1.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-border" />
+              <span className="h-2.5 w-2.5 rounded-full bg-border" />
+              <span className="h-2.5 w-2.5 rounded-full bg-border" />
+            </div>
+            <div className="text-muted-foreground">{`// launching soon`}</div>
+            <div>
+              <span className="text-muted-foreground">const</span> you = {`{`}
+            </div>
+            <div className="pl-4">
+              curious: <span className="text-primary">true</span>,
+            </div>
+            <div className="pl-4">
+              skills: <span className="text-primary">"any level"</span>,
+            </div>
+            <div className="pl-4">
+              ready: <span className="text-primary">true</span>
+            </div>
+            <div>{`};`}</div>
+            <div className="mt-3">
+              <span className="text-muted-foreground">if</span> (you.ready) {`{`}
+            </div>
+            <div className="pl-4">
+              <span className="text-primary">joinUs()</span>;
+              <span className="ml-0.5 inline-block h-3 w-0.5 translate-y-0.5 animate-pulse bg-primary align-middle" />
+            </div>
+            <div>{`}`}</div>
+          </div>
+        </section>
       </main>
 
-      {/* Footer */}
-      <footer className="absolute bottom-0 left-0 right-0 py-6 text-center">
-        <p className="font-body text-sm text-muted-foreground">
-          © 2026 CODE Club. All rights reserved.
+      {/* FOOTER */}
+      <footer className="flex flex-col items-center justify-between gap-3 border-t border-border px-6 py-6 md:flex-row md:px-12">
+        <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.15em]">
+          <span className="bg-primary px-1.5 py-0.5 text-primary-foreground">{`{ }`}</span>
+          CODE Club
+        </div>
+        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted-foreground">
+          © 2026 — All rights reserved
         </p>
       </footer>
     </div>
