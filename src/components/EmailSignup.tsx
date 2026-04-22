@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ArrowRight, Check } from "lucide-react";
 
 const EmailSignup = () => {
   const [email, setEmail] = useState("");
@@ -14,31 +16,32 @@ const EmailSignup = () => {
 
   if (isSubmitted) {
     return (
-      <div className="flex items-center gap-3 border border-border bg-primary px-6 py-4 text-primary-foreground">
-        <div className="flex h-7 w-7 items-center justify-center border border-primary-foreground/30">
-          <Check className="h-4 w-4" />
+      <div className="flex items-center gap-3 rounded-xl border border-primary/30 bg-primary/10 px-6 py-4">
+        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary">
+          <Check className="h-4 w-4 text-primary-foreground" />
         </div>
-        <p className="font-mono text-xs uppercase tracking-[0.15em]">You're on the list</p>
+        <p className="font-medium text-foreground">You're on the list!</p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full max-w-md flex-col gap-0 border border-border bg-card sm:flex-row">
-      <input
+    <form onSubmit={handleSubmit} className="flex w-full max-w-md flex-col gap-3 sm:flex-row">
+      <Input
         type="email"
-        placeholder="your.email@university.edu"
+        placeholder="Enter your email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="h-12 flex-1 bg-transparent px-4 font-mono text-xs uppercase tracking-[0.12em] text-foreground placeholder:text-muted-foreground/70 focus:outline-none"
+        className="h-14 flex-1 rounded-xl border-muted bg-secondary/50 px-5 font-body text-base placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/20"
         required
       />
-      <button
-        type="submit"
-        className="h-12 border-l border-border bg-foreground px-6 font-mono text-xs uppercase tracking-[0.15em] text-background transition-colors hover:bg-primary hover:text-primary-foreground"
+      <Button 
+        type="submit" 
+        className="group h-14 gap-2 rounded-xl bg-primary px-8 font-display font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20"
       >
-        Notify Me →
-      </button>
+        Notify Me
+        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+      </Button>
     </form>
   );
 };

@@ -14,10 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Fraunces', 'serif'],
-        body: ['DM Mono', 'monospace'],
-        serif: ['Fraunces', 'serif'],
-        mono: ['DM Mono', 'monospace'],
+        display: ['Space Grotesk', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
