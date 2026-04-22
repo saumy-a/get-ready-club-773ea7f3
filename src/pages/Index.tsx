@@ -1,5 +1,6 @@
 import EmailSignup from "@/components/EmailSignup";
 import GlowOrb from "@/components/GlowOrb";
+import WalkingCharacter from "@/components/WalkingCharacter";
 import { Instagram, Linkedin } from "lucide-react";
 import codeLogo from "@/assets/code-logo.png";
 
@@ -113,6 +114,8 @@ const Index = () => {
           © 2026 CODE Club. All rights reserved.
         </p>
       </footer>
+
+      <WalkingCharacter />
     </div>
   );
 };
