@@ -2,50 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Mono:wght@300;400;500&display=swap');
 
 @layer base {
   :root {
-    --background: 222 47% 8%;
-    --foreground: 210 40% 98%;
+    /* Light theme — cream paper with ink */
+    --background: 44 33% 95%;          /* #F7F5F0 */
+    --foreground: 60 6% 10%;           /* #1A1A18 */
 
-    --card: 222 47% 10%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;                 /* #FFFFFF */
+    --card-foreground: 60 6% 10%;
 
-    --popover: 222 47% 10%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 60 6% 10%;
 
-    --primary: 175 75% 50%;
-    --primary-foreground: 222 47% 8%;
+    --primary: 60 6% 10%;              /* ink as primary */
+    --primary-foreground: 44 33% 95%;
 
-    --secondary: 222 40% 14%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 40 13% 92%;
+    --secondary-foreground: 60 6% 10%;
 
-    --muted: 222 30% 20%;
-    --muted-foreground: 215 20% 60%;
+    --muted: 40 13% 92%;
+    --muted-foreground: 47 6% 52%;     /* #8A8880 */
 
-    --accent: 175 75% 50%;
-    --accent-foreground: 222 47% 8%;
+    --accent: 75 84% 60%;              /* #C8F043 highlight */
+    --accent-foreground: 60 6% 10%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 222 30% 18%;
-    --input: 222 30% 18%;
-    --ring: 175 75% 50%;
+    --border: 40 19% 82%;              /* #D8D4CC rule */
+    --input: 40 19% 82%;
+    --ring: 75 84% 60%;
 
     --radius: 0.75rem;
 
-    /* Custom design tokens - CODE club palette */
-    --gradient-primary: linear-gradient(135deg, hsl(175 75% 50%) 0%, hsl(190 80% 45%) 100%);
-    --gradient-glow: radial-gradient(ellipse at center, hsl(175 75% 50% / 0.15) 0%, transparent 70%);
-    --gradient-hero: linear-gradient(180deg, hsl(222 47% 8%) 0%, hsl(222 47% 11%) 100%);
-    
-    --shadow-glow: 0 0 80px hsl(175 75% 50% / 0.25);
-    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.5);
+    /* Custom design tokens — CODE club paper palette */
+    --highlight: 75 84% 60%;           /* #C8F043 */
+    --rule: 40 19% 82%;
+    --gradient-primary: linear-gradient(135deg, hsl(75 84% 60%) 0%, hsl(70 80% 55%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(75 84% 60% / 0.25) 0%, transparent 70%);
+    --gradient-hero: linear-gradient(180deg, hsl(44 33% 95%) 0%, hsl(44 25% 92%) 100%);
 
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --shadow-glow: 0 0 80px hsl(75 84% 60% / 0.35);
+    --shadow-card: 0 4px 24px hsl(60 6% 10% / 0.08);
+
+    --font-display: 'Fraunces', serif;
+    --font-body: 'DM Mono', monospace;
+  }
+
+  .dark,
+  [data-theme="dark"] {
+    --background: 60 4% 6%;            /* #0F0F0E */
+    --foreground: 44 25% 92%;          /* #F0EDE6 */
+
+    --card: 60 6% 9%;                  /* #161614 */
+    --card-foreground: 44 25% 92%;
+
+    --popover: 60 6% 9%;
+    --popover-foreground: 44 25% 92%;
+
+    --primary: 44 25% 92%;
+    --primary-foreground: 60 4% 6%;
+
+    --secondary: 60 5% 12%;
+    --secondary-foreground: 44 25% 92%;
+
+    --muted: 60 5% 12%;
+    --muted-foreground: 60 2% 35%;     /* #5A5A56 */
+
+    --accent: 75 84% 60%;
+    --accent-foreground: 60 4% 6%;
+
+    --border: 60 5% 15%;               /* #272724 */
+    --input: 60 5% 15%;
+    --ring: 75 84% 60%;
+
+    --gradient-hero: linear-gradient(180deg, hsl(60 4% 6%) 0%, hsl(60 5% 8%) 100%);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.5);
   }
 }
 
