@@ -7,8 +7,9 @@ const Index = () => {
   return (
     <div className="relative min-h-screen overflow-hidden hero-gradient">
       {/* Background glow effects */}
-      <GlowOrb className="left-1/4 top-1/4 h-96 w-96 -translate-x-1/2 -translate-y-1/2" />
-      <GlowOrb className="right-1/4 bottom-1/4 h-80 w-80 translate-x-1/2 translate-y-1/2" />
+      <GlowOrb className="left-1/4 top-1/4 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 bg-highlight/30" />
+      <GlowOrb className="right-1/4 bottom-1/4 h-96 w-96 translate-x-1/2 translate-y-1/2 bg-highlight/25" />
+      <GlowOrb className="left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 bg-highlight/15" />
       
       {/* Grid pattern overlay */}
       <div 
@@ -37,14 +38,14 @@ const Index = () => {
 
           {/* Badge */}
           <div 
-            className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 animate-fade-in"
+            className="mb-8 inline-flex items-center gap-2 rounded-full border border-highlight/40 bg-highlight/10 px-4 py-2 animate-fade-in"
             style={{ animationDelay: '0.2s' }}
           >
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-highlight opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-highlight" />
             </span>
-            <span className="font-body text-sm font-medium text-primary">
+            <span className="font-body text-sm font-medium text-highlight">
               Launching Soon
             </span>
           </div>
@@ -55,9 +56,9 @@ const Index = () => {
             style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
           >
             Where{' '}
-            <span className="text-primary">Code</span>
+            <span className="text-highlight">Code</span>
             {' '}Meets{' '}
-            <span className="text-primary">Community</span>
+            <span className="text-highlight">Community</span>
           </h1>
 
           {/* Subheading */}
@@ -87,7 +88,7 @@ const Index = () => {
                 href="https://www.instagram.com/codeclub.gsfcu/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-muted bg-secondary/50 text-muted-foreground transition-all hover:border-primary hover:bg-primary/10 hover:text-primary"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-secondary/50 text-muted-foreground transition-all hover:border-highlight hover:bg-highlight/10 hover:text-highlight"
                 aria-label="Follow us on Instagram"
               >
                 <Instagram className="h-4 w-4" />
@@ -96,7 +97,7 @@ const Index = () => {
                 href="https://www.linkedin.com/in/code-club-gsfc-university-0621a61ba/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-muted bg-secondary/50 text-muted-foreground transition-all hover:border-primary hover:bg-primary/10 hover:text-primary"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-secondary/50 text-muted-foreground transition-all hover:border-highlight hover:bg-highlight/10 hover:text-highlight"
                 aria-label="Follow us on LinkedIn"
               >
                 <Linkedin className="h-4 w-4" />

@@ -16,8 +16,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 60 6% 10%;
 
-    --primary: 60 6% 10%;              /* ink as primary */
-    --primary-foreground: 44 33% 95%;
+    --primary: 75 84% 60%;             /* highlight #C8F043 as primary */
+    --primary-foreground: 60 6% 10%;
 
     --secondary: 40 13% 92%;
     --secondary-foreground: 60 6% 10%;
@@ -62,7 +62,7 @@
     --popover: 60 6% 9%;
     --popover-foreground: 44 25% 92%;
 
-    --primary: 44 25% 92%;
+    --primary: 75 84% 60%;             /* highlight stays vivid in dark */
     --primary-foreground: 60 4% 6%;
 
     --secondary: 60 5% 12%;
